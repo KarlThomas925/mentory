@@ -1,0 +1,19 @@
+<h1>Add a new pairing offering</h1>
+
+<%= render '/shared/error_messages' %>
+
+<div class="row">
+  <div class="col s8 push-s2">
+      <%= form_for :pairing, url: user_pairings_path do |f| %>
+    <p>
+      <%= f.label :start_time %><br>
+      <%= f.datetime_field :start_time %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
+
+  </div>
+</div>
